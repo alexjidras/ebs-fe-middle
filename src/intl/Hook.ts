@@ -13,7 +13,7 @@ export function useIntl(): TranslateUtils {
 
   return {
     lang: context.locale,
-    t: (key, params) => {
+    t: (key, params = {}) => {
       const translatedKey = get(context.translate, [key, context.locale], key);
       if (!params) {
         return translatedKey;
