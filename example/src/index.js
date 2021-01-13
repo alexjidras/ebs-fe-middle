@@ -5,8 +5,6 @@ import { IntlProvider } from 'ebs-intl';
 import { Test } from './Test';
 import translate from './res/translate.json';
 
-console.log(translate)
-
 const App = () => {
   const [language, setLanguage] = useState(document.documentElement.lang);
 
