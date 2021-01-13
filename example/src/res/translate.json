@@ -1,0 +1,7 @@
+{
+    "greeting": {
+        "en": "Hello, {name}!",
+        "ru": "Привет, {name}!",
+        "ro": "Salut, {name}!"
+    }
+}

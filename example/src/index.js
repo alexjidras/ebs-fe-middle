@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { render } from 'react-dom';
-import { useIntl } from 'ebs-intl';
+import { IntlProvider } from 'ebs-intl';
+
+import { Test } from './Test';
+import translate from './res/translate.json';
+
+console.log(translate)
 
 const App = () => {
-  const t = useIntl();
+  const [language, setLanguage] = useState(document.documentElement.lang);
 
-  return <div>{t('greeting')}</div>;
+  return (
+    <IntlProvider translate={translate} locale={language}>
+      <Test setLanguage={setLanguage} />
+    </IntlProvider>
+  );
 };
 
 render(<App />, document.getElementById('root'));
